@@ -1,0 +1,55 @@
+{% extends "weather_base.html" %}
+{% block title %}消息內容頁面{% endblock %}
+{% block headmessage %} <h1>顯示消息內容</h1>{% endblock %}
+{% block content %}
+    <table class='table table-striped table-bordered'>
+        <tr>
+            <td>地點</td>
+            <td>{{ local_weather.local }}</td>
+        </tr>
+        <tr>
+            <td>時間</td>
+            <td>{{ local_weather.time }}</td>
+        </tr>
+        <tr>
+            <td>降雨量</td>
+            <td>{{ local_weather.rainfall }}</td>
+        </tr>
+    </table>
+    <table class='table table-striped table-bordered'>
+        <tr>
+            <th>1月</th>
+            <th>2月</th>
+            <th>3月</th>
+            <th>4月</th>
+            <th>5月</th>
+            <th>6月</th>
+            <th>7月</th>
+            <th>8月</th>
+            <th>9月</th>
+            <th>10月</th>
+            <th>11月</th>
+            <th>12月</th>
+        </tr>
+        <tbody>
+        {% for a in a_all %}
+            <tr>
+                <td>{{ a.January }}</td>
+                <td>{{ a.February }}</td>
+                <td>{{ a.March }}</td>
+                <td>{{ a.April }}</td>
+                <td>{{ a.May }}</td>
+                <td>{{ a.June }}</td>
+                <td>{{ a.July }}</td>
+                <td>{{ a.August }}</td>
+                <td>{{ a.September }}</td>
+                <td>{{ a.October }}</td>
+                <td>{{ a.November }}</td>
+                <td>{{ a.December }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+</body>
+</html>
