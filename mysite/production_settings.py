@@ -1,6 +1,5 @@
 # Import all default settings.
-from .settings import *
-
+from djangoProject3.settings import *
 import dj_database_url
 DATABASES = {
     'default': dj_database_url.config(),
