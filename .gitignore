@@ -1,7 +1,8 @@
-# djangogirls/.gitignore
-
-djangogirls_venv
+.vscode
 *.pyc
 __pycache__
-staticfiles
 db.sqlite3
+Include
+Lib
+Scripts
+tcl
